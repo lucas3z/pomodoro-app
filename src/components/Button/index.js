@@ -1,7 +1,11 @@
 import './style.css';
 
-function Button({ text }) {
-  return <button className='btn'>{text}</button>;
+function Button({ text, reset }) {
+  return (
+    <button className='btn' onClick={reset}>
+      {text}
+    </button>
+  );
 }
 
 export default Button;
