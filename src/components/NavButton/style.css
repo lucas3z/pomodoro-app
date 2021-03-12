@@ -1,0 +1,10 @@
+button.nav-btn {
+  height: 100%;
+  width: 100%;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: bold;
+}

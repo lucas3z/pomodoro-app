@@ -1,17 +1,19 @@
+import NavButton from '../NavButton';
+
 import './style.css';
 
-function DefineCounter() {
+function DefineCounter({ change }) {
   return (
     <nav>
       <ul>
         <li className='active'>
-          <a href='#'>pomodoro</a>
+          <NavButton text='pomodoro' change={() => change(25)} />
         </li>
         <li>
-          <a href='#'>short break</a>
+          <NavButton text='short break' change={() => change(5)} />
         </li>
         <li>
-          <a href='#'>long break</a>
+          <NavButton text='long break' change={() => change(10)} />
         </li>
       </ul>
     </nav>

@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import './style.css';
 
 function Clock({ isActive, minutes, seconds, startCountdown, pauseCountdown }) {

@@ -1,10 +1,10 @@
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import DefineCounter from './components/DefineCounter';
 import Clock from './components/Clock';
-import Button from './components/Button';
+import ResetButton from './components/ResetButton';
 
 import './global.css';
-import { useEffect, useState } from 'react';
 
 function App() {
   let countdownTimeout;
@@ -30,6 +30,11 @@ function App() {
     setTime(0.1 * 60);
   }
 
+  function changeOption(value) {
+    reset();
+    setTime(value * 60);
+  }
+
   useEffect(() => {
     if (isActive && time > 0) {
       countdownTimeout = setTimeout(() => {
@@ -43,7 +48,7 @@ function App() {
   return (
     <>
       <Header title='pomodoro' />
-      <DefineCounter />
+      <DefineCounter change={changeOption} />
       <Clock
         isActive={isActive}
         minutes={minutes}
@@ -51,7 +56,7 @@ function App() {
         startCountdown={startCountdown}
         pauseCountdown={pauseCountdown}
       />
-      <Button text='Reset' reset={reset} />
+      <ResetButton text='Reset' reset={reset} />
     </>
   );
 }
