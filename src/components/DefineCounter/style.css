@@ -1,0 +1,47 @@
+nav {
+  background-color: var(--clock-color);
+  height: 50px;
+  width: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+nav ul li {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
+nav ul li:not(.active):hover {
+  background-color: var(--active-color);
+  color: var(--clock-color);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
