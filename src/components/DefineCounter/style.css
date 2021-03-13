@@ -35,4 +35,5 @@ nav ul li:not(.active):hover {
 .active {
   background-color: var(--text-color);
   color: var(--background-color);
+  border-radius: 30px;
 }

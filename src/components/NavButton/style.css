@@ -1,10 +1,8 @@
-button.nav-btn {
-  height: 100%;
-  width: 100%;
+.nav-btn {
+  text-decoration: none;
   color: inherit;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: inherit;
-  font-weight: bold;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
