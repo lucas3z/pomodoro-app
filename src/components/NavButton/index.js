@@ -13,6 +13,11 @@ function NavButton({ text, change }) {
           ? 'nav-btn active'
           : 'nav-btn'
       }
+      style={
+        location.pathname === '/' + text.split(' ')[0]
+          ? { pointerEvents: 'none', cursor: 'default' }
+          : {}
+      }
       onClick={change}
     >
       {text}
