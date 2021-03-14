@@ -2,14 +2,13 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import DefineCounter from './components/DefineCounter';
 import Clock from './components/Clock';
-import ResetButton from './components/ResetButton';
 
 import './global.css';
 
 function App() {
   let countdownTimeout;
 
-  const [time, setTime] = useState(0.1 * 60);
+  const [time, setTime] = useState(0 * 60);
   const [isActive, setIsActive] = useState(false);
 
   const minutes = Math.floor(time / 60);
@@ -27,7 +26,6 @@ function App() {
   function reset() {
     clearTimeout(countdownTimeout);
     setIsActive(false);
-    setTime(0.1 * 60);
   }
 
   function changeOption(value) {
@@ -56,7 +54,6 @@ function App() {
         startCountdown={startCountdown}
         pauseCountdown={pauseCountdown}
       />
-      <ResetButton text='Reset' reset={reset} />
     </>
   );
 }
