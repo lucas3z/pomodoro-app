@@ -13,6 +13,13 @@
   transition: filter 0.2s;
 }
 
+@media screen and (max-width: 500px) {
+  .counter {
+    height: 300px;
+    width: 300px;
+  }
+}
+
 .counter:hover {
   filter: brightness(0.8);
 }
