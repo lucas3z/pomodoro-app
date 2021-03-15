@@ -10,7 +10,7 @@ function DefineCounter({ change }) {
       <nav>
         <ul>
           <li>
-            <NavButton text='pomodoro' change={() => change(25)} />
+            <NavButton text='pomodoro' change={() => change(0.1)} />
           </li>
           <li>
             <NavButton text='short break' change={() => change(5)} />

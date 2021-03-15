@@ -3,6 +3,8 @@ import Header from './components/Header';
 import DefineCounter from './components/DefineCounter';
 import Clock from './components/Clock';
 
+import notification from './assets/notification.mp3';
+
 import './global.css';
 
 function App() {
@@ -33,6 +35,21 @@ function App() {
     setTime(value * 60);
   }
 
+  function notify() {
+    let audio = new Audio(notification);
+    audio.play();
+
+    if (Notification.permission === 'granted') {
+      new Notification('Counter reached 0', {
+        body: 'Start a new one. ;)',
+      });
+    }
+  }
+
+  useEffect(() => {
+    Notification.requestPermission();
+  }, []);
+
   useEffect(() => {
     if (isActive && time > 0) {
       countdownTimeout = setTimeout(() => {
@@ -40,6 +57,7 @@ function App() {
       }, 1000);
     } else if (isActive && time === 0) {
       setIsActive(false);
+      notify();
     }
   }, [isActive, time]);
 
