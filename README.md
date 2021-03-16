@@ -19,5 +19,6 @@ Open: [http://localhost:3000](http://localhost:3000)
 - React Hooks
 - React Router Dom
 
-Layout
+## Layout
+
 ![Project UI](https://github.com/lucas3z/pomodoro-app/blob/main/layout/main-ui.png?raw=true)
