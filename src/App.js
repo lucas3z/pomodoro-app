@@ -40,7 +40,7 @@ function App() {
     audio.play();
 
     if (Notification.permission === 'granted') {
-      new Notification('Counter reached 0', {
+      new Notification('COUNTER REACHED ZERO.', {
         body: 'Start a new one. ;)',
       });
     }
