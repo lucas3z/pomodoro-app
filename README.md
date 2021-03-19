@@ -2,23 +2,35 @@
 
 > Time management app in which you focus on a task for 25 minutes, and take a break of either 5 or 10 minutes
 
-## Usage
+### Layout
+<div>
+  <img src="https://github.com/lucas3z/pomodoro-app/blob/main/layout/main-ui.png?raw=true" alt="Main Page">
+</div>
 
-### `git clone https://github.com/lucas3z/pomodoro-app.git`
+### Technologies
+- [ReactJS](https://reactjs.org)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
 
-### `yarn install`
+### Features
+- Star/pause timer
+- Choose pomodoro or break timer
+- Show notification when timer reaches zero
 
-### `yarn start`
+### How to run
+```
+# Clone repository
+git clone https://github.com/lucas3z/pomodoro-app.git
 
+# Change directory
+cd pomodoro-app
+
+# Install dependencies
+yarn install
+
+# Start the app
+yarn start
+
+```
 Runs the app in the development mode.<br />
 Open: [http://localhost:3000](http://localhost:3000)
-
-## Technologies:
-
-- ReactJS
-- React Hooks
-- React Router Dom
-
-## Layout
-
-![Project UI](https://github.com/lucas3z/pomodoro-app/blob/main/layout/main-ui.png?raw=true)
